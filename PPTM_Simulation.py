@@ -49,6 +49,10 @@ def PPTM(f):
             return result
 
 # Generates all possible pathological configurations up to a given length.
+# This is to represent all possible deterministic representations of
+# Our PPTM, since this exhaustive method is typically what is used
+# To demonstrate equivalence (in adversarial cases, this does not hold).
+
 def pathological_simulations(x):
     pathologies = ['pathological_decider_1', 'pathological_decider_2']
     for length in range(1, x+1):
